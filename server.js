@@ -23,7 +23,7 @@ app.get('/',(req,res)=>{
         return res.json({error: "Password should contain at least one uppercase letter, one lowercase letter, one number and one special character"})
     }
 
-    if(DOB < 18){
+    if(DOB <= 18){
         return res.json({error: "User must be 18 or older"})
     }
     return res.send("User Created")
